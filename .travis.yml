@@ -12,3 +12,11 @@ cache: bundler
 notifications:
   email: true
 
+deploy:
+  provider: s3
+  access_key_id: "AKIAJWFNNJJBU3RV2ZVQ"
+  secret_access_key: "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"
+  bucket: "eu.webteq.travis"
+  local_dir: "_site"
+  region: eu-west-2
+
