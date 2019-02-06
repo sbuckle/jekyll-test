@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - 2.4.1
+
+script: jekyll build
+
+sudo: false
+
+cache: bundler
+
+notifications:
+  email: true
+
