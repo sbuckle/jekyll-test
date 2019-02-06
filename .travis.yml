@@ -1,22 +1,18 @@
 language: ruby
 rvm:
-  - 2.4.1
-
+- 2.4.1
 install: gem install jekyll
 script: jekyll build
-
 sudo: false
-
 cache: bundler
-
 notifications:
   email: true
-
 deploy:
   provider: s3
-  access_key_id: "AKIAJWFNNJJBU3RV2ZVQ"
-  secret_access_key: "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"
-  bucket: "eu.webteq.travis"
-  local_dir: "_site"
+  access_key_id: AKIAJXGYDTBEUXLQE5TQ
+  secret_access_key:
+    secure: mXJnB0w5h+ufe8czvKZr6rmnzrTGpU+SdsDiItmrGG1KDPG+K12a4XDUZuwoDVzPW4AwacXObPD6knuatg/QovNIgldY2QHDfryGjDpRhdPs9+lrmy8gO7eJvBaflJw0xKG8/NSWbccFvTzfkAu1k8ulB80NM5tfvnzCbJql/L/HvTBFtdN3C4CNbQB2aPzXNHmPZVni3pkp13xZw8wQvb+Z5/apZpDfJRl4hbbOPs7mwF2MVkAE6QzdBpH7AZiLqEQK83ozcuoskS6bIdUjKrFY2G8huFzmvBPEogYzwB7/wgBx8mkP9b3dGK1hm8UjYdPCNvVty87nhwbMljI3A7dH0qg7Z+LfRyIH7NhHsk2mpSCnYCQtCsh4gEpR5nEJ9eMGBPYxiR/FyB/Dwtv9QSrFfoX1+Ep60E79AU/wICQ+DBaS4X8ab40E6n43uNqVnvQMqLZqY4UbPpVgUKv2HoBAHJqaq77Ba9X4UXYmvlCMMorT9oAkVkbt68SgrYaeYLlasrtKckgWkJMcBdOjqpGPNjClyFILvvlGuwqf3hGPmEfcjwKVsBeIvvt/c85RIHkJMFUyLRmhHdWnzIFDANwFbHUn/e6ttaNq5aXDU7YBnhUbJWE0073vZoYuzLGg5CNsj3fr6kBPq+YKkC7o2QsUGlk/PY9QhxBinS/arp0=
+  bucket: eu.webteq.travis
+  local-dir: _site/
+  skip_cleanup: true
   region: eu-west-2
-
