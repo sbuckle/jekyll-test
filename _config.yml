@@ -2,4 +2,5 @@ exclude:
   - vendor
   - Gemfile
   - Gemfile.lock
+  - buildspec.yml
 
