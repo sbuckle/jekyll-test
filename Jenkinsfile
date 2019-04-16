@@ -11,7 +11,9 @@ pipeline {
             }
         }
         stage('Output') {
-            echo "${result.getArtifactsLocation()}"
+            steps {
+                echo "${result.getArtifactsLocation()}"
+            }
         }
     }
 }
